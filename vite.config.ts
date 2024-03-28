@@ -1,5 +1,4 @@
 import react from '@vitejs/plugin-react-swc'
-import path from 'path'
 import { defineConfig } from 'vite'
 
 export default defineConfig({
@@ -12,15 +11,15 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, 'src')
+      components: `${__dirname}/src/components/`,
+      styles: `${__dirname}/src/styles/`,
+      types: `${__dirname}/src/types/`,
+      utils: `${__dirname}/src/utils/`
     }
   },
   define: {
     'process.env': process.env,
     global: 'window'
-  },
-  build: {
-    commonjsOptions: { include: [] }
   },
   optimizeDeps: {
     disabled: false
