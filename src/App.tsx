@@ -1,13 +1,12 @@
-import { Counter } from './components/Counter'
+import Counter from './components/Counter'
+import GlobalStyles from './styles/global-styles'
 
-function App() {
+function App(): JSX.Element {
   return (
-    <div>
-      <h1>Vite + React</h1>
-      <div>
-        <Counter />
-      </div>
-    </div>
+    <>
+      <GlobalStyles />
+      <Counter label="Contador em" primary />
+    </>
   )
 }
 
