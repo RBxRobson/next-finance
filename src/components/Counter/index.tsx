@@ -1,4 +1,5 @@
 import { useState } from 'react'
+
 import * as S from './styles'
 
 interface CounterProps {
@@ -26,7 +27,8 @@ const Counter = ({
         setCount((count) => count + 1)
       }}
     >
-      {`${label} ${count}`}
+      {label}
+      <span data-testid="counter-view"> {count}</span>
     </S.Counter>
   )
 }

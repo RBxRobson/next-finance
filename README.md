@@ -1,30 +1,20 @@
-# React + TypeScript + Vite
+# Vite Setup
+> Eslint (+Prettier), Storybook, Styled-components, Jest e Playwright
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[![vite-setup](https://github.com/igorvieira/vite-setup/actions/workflows/node.js.yml/badge.svg?branch=master)](https://github.com/igorvieira/vite-setup/actions/workflows/node.js.yml)
 
-Currently, two official plugins are available:
+## Build Setup
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```bash
+# install dependencies
+npm install or yarn
 
-## Expanding the ESLint configuration
+# run the tests
+npm test or yarn test
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+# run the e2e tests
+npm run test:playwright or yarn test:playwright
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+# storybook
+npm run storybook or yarn storybook
 ```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list

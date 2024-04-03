@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react'
+
 import Counter from '.'
 
 // Mais informações sobre como configurar histórias em: https://storybook.js.org/docs/writing-stories#default-export
