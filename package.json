@@ -8,6 +8,8 @@
     "build": "tsc && vite build",
     "test": "jest --maxWorkers=50% --coverage=false",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "test:playwright": "playwright test --headed --config=playwright.config.ts --project=chromium",
+    "test:playwright:helper": "npx playwright codegen http://localhost:3000",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
@@ -23,6 +25,7 @@
     "@babel/preset-react": "^7.24.1",
     "@babel/preset-typescript": "^7.24.1",
     "@chromatic-com/storybook": "^1.2.25",
+    "@playwright/test": "^1.42.1",
     "@storybook/addon-essentials": "^8.0.5",
     "@storybook/addon-interactions": "^8.0.5",
     "@storybook/addon-links": "^8.0.5",
